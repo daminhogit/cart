@@ -1,5 +1,23 @@
-@Library('roboshop') _
+pipeline {
+  agent any
 
-env.COMPONENT = "cart"
-env.REPO_URL = "https://github.com/raghudevopsb69/cart"
-nodejs()
+  stages {
+
+    stage('Code Quality') {
+      steps {
+        echo 'Code Quality'
+      }
+    }
+    stage('Test Cases') {
+      steps {
+        echo 'Test Cases'
+      }
+    }
+
+    stage('Publish A Release') {
+      steps {
+        echo 'Publish A Release'
+      }
+    }
+  }
+}
